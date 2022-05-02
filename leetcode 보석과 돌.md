@@ -43,12 +43,12 @@ const numJewelsInStones = (jewels, stones) => stones.match(new RegExp(`[${jewels
 ref > https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 
 
-stones.match(RegExp로 생성된 객체)가 string.match를 실행하고 나서 일치하는 값이 없다면 null을 반환할 거라** 저렇게 optional chaining연산자로 length라는 프로퍼티를 0 으로 해준다고 쓰신 것 같다. 근데 length 프로퍼티가 존재하지 않을 경우를 위해 또 ??를 써주신듯(?)
+stones.match(RegExp로 생성된 객체)가 string.match를 실행하고 나서 일치하는 값이 있다면 배열, 없다면 null을 반환할 거라** 저렇게 optional chaining연산자로 length를 반환한다고 해주고, 근데 또 length 프로퍼티가 존재하지 않을 경우를 위해 또 ?? 0을 해주신듯
 
 >>** 문자열이 정규식과 일치하면, 일치하는 전체 문자열을 첫 번째 요소로 포함하는 [`Array`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)를 반환한 다음 괄호 안에 캡처된 결과가 옵니다. 일치하는 것이 없으면 [`null`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/null)이 반환됩니다.
 >>https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/match
 
-JS 내장객체 RegExp에 대해서는 요즘 읽고 있는 You don't know JS(예제가 웃겨 미치겠음)에서 일요일에 첨봤는데(존재만 앎) 그래도 사용법을 몰라서 MDN을 까보았다~
+JS 내장객체 RegExp에 대해서는 요즘 예제가 웃겨서 읽고 있는 책 <<You don't know JS>>에서 일요일에 첨봤는데(존재만 앎) 사용법을 몰라서 MDN을 까보았다~
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 
 ## [구문](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp#%EA%B5%AC%EB%AC%B8 "Permalink to 구문")
